@@ -17,13 +17,8 @@ public class SortAplicacion {
      */
     public static void main(String[] args) {
        
-        int[] numeros = {4, 6, 2, 1, 86, 32, 8, 13, 67};
+       Ordenar ord = new Ordenar();
+       ord.setVisible(true);
 
-        Ordenador ord = new Ordenador();
-        ord.insertionSort2(numeros);
-
-        for (int i = 0; i < numeros.length; i++) {
-           System.out.println(numeros[i]);
-        }
     }
 }

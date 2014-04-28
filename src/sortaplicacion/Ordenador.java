@@ -84,17 +84,24 @@ public void selectionSort3(int numeros[]){
     }
 }
 public void bubbleSort(int numeros[]){
-  int temp;
-  for(int j=numeros.length-1; j > 0; j--){
-   for(int i=0; i < j; i++){
-    if(numeros[i] > numeros[i+1]){
-     temp=numeros[i];
-     numeros[i]=numeros[j];
-     numeros[j]=temp;
+ 
+        boolean flag = true;
+        int temp;
+
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < numeros.length - 1; i++) {
+
+                if (numeros[i] > numeros[i + 1]) {
+                    temp = numeros[i];
+                    numeros[i] = numeros[i + 1];
+                    numeros[i + 1] = temp;
+                    flag = true;
+
+                }
+            }
+        }
     }
-   }
-  }
-} 
 }
 
 
