@@ -58,57 +58,56 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="jcbordenadores" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtnumero1" min="-2" pref="40" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtnumber1" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="txtnumero1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtnumero2" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtnumero3" min="-2" pref="40" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtnumero4" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtnumero5" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtnumero6" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="txtnumber1" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtnumber2" min="-2" pref="40" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="txtnumber3" min="-2" pref="40" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtnumber4" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="txtnumber5" min="-2" pref="40" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtnumber6" min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtnumber7" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="txtnumero7" min="-2" pref="40" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="txtnumber5" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumber6" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumber7" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumber8" min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="txtnumero5" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumero6" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumero7" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="txtnumero8" min="-2" pref="40" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="txtnumero8" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txtnumber8" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+              <EmptySpace pref="29" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -118,32 +117,36 @@
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtnumero1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumero2" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txtnumero6" alignment="3" pref="35" max="32767" attributes="0"/>
+                      <Component id="txtnumero7" alignment="3" pref="35" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="txtnumero5" max="32767" attributes="0"/>
+                  <Component id="txtnumero4" max="32767" attributes="0"/>
+                  <Component id="txtnumero3" max="32767" attributes="0"/>
+                  <Component id="txtnumero2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtnumero8" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtnumero1" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtnumber1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtnumber8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtnumber1" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber6" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber7" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber8" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtnumber5" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jcbordenadores" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -152,10 +155,11 @@
     <Component class="javax.swing.JComboBox" name="jcbordenadores">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
+          <StringArray count="4">
             <StringItem index="0" value="InsertionSort"/>
             <StringItem index="1" value="SelectionSort"/>
-            <StringItem index="2" value="BubleSort"/>
+            <StringItem index="2" value="BubbleSort"/>
+            <StringItem index="3" value="BogoSort"/>
           </StringArray>
         </Property>
       </Properties>
@@ -204,6 +208,11 @@
     <Component class="javax.swing.JTextField" name="txtnumber1">
     </Component>
     <Component class="javax.swing.JTextField" name="txtnumber8">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Elija una forma de Ordenamiento"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

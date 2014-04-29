@@ -6,14 +6,18 @@
 
 package sortaplicacion;
 
+
+
 /**
  *
  * @author KrRD
  */
 public class Ordenador {
-   
-public void selectionSort(int numeros[]){
-  int i,j,min,temp;
+  
+    
+    
+public int[] selectionSort(int[] numeros, int length) {
+  int j,i,min,temp;
   for(j=0; j < numeros.length-1; j++){
    min=j;
    for(i=j+1; i < numeros.length; i++)
@@ -24,20 +28,21 @@ public void selectionSort(int numeros[]){
     numeros[min]=temp;
    }
   }
+    return numeros;
 } 
     
-public void insertionSort(int numeros[]){
+ public int[] insertionSort(int[] numeros, int length) {
   
-        int i, k, temp;
+        int k,i, temp;
         for (k = 1; k < numeros.length; k++) {
             temp = numeros[k];
             i = k;
             while (i > 0 && temp < numeros[i - 1]) {
-                numeros[i] = numeros[i - 1];
-                i--;
+                numeros[i] = numeros[i - 1];i--;
             }
             numeros[i] = temp;
         }
+    return numeros;
     }
 
 public void insertionSort2(int numeros[]){
@@ -83,7 +88,7 @@ public void selectionSort3(int numeros[]){
         }
     }
 }
-public void bubbleSort(int numeros[]){
+public int[] bubbleSort(int[] numeros, int length) {
  
         boolean flag = true;
         int temp;
@@ -101,8 +106,32 @@ public void bubbleSort(int numeros[]){
                 }
             }
         }
-    }
+    return numeros;
+  }
+ public int[] bogoSort(int[] numeros, int length)  
+    {  
+        while (!isSorted(numeros)) {  
+            for (int i = 0; i <numeros.length; i++){  
+                int randomPosition = (numeros.length);  
+  
+                int temp = numeros[i];  
+                numeros[i] = numeros[randomPosition];  
+                numeros[randomPosition] = temp;  
+            }  
+        }  
+    return null;
+    }  
+  
+    private static boolean isSorted(int[] data)  
+    {  
+        for (int i = 1; i < data.length; i++)  
+            if (data[i] < data[i - 1])  
+                return false;  
+  
+        return true;  
+    }  
 }
+
 
 
 
