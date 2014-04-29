@@ -22,8 +22,8 @@ public class OrdenamientosTest {
     Ordenador bubble;
     Ordenador insertion;
     Ordenador selection;
-    int[] vector = {5,7,8,3,1,4,10,9,6,2};
-    int[] vector2 = {1,2,3,4,5,6,7,8,9,10};
+    int[] Desordenado = {5,7,8,3,1,4,10,9,6,2};
+    int[] Ordenado = {1,2,3,4,5,6,7,8,9,10};
     
     public OrdenamientosTest() {
     }
@@ -48,7 +48,7 @@ public class OrdenamientosTest {
     
     @After
     public void tearDown() {
-    bogo = null;
+        bogo = null;
         bubble = null;
         insertion = null;
         selection = null;
@@ -59,25 +59,32 @@ public class OrdenamientosTest {
      
      @Test
     public void selectionSort() {
-        int[] vectorOrdenado = selection.selectionSort(vector,vector.length);
-        for(int i= 0; i<vector.length; i++){
-            assertEquals(vector2[i], vectorOrdenado[i]);
+        int[] Orden = selection.selectionSort(Desordenado);
+        for(int i= 0; i<Desordenado.length; i++){
+            assertEquals(Ordenado[i], Orden[i]);
         }
     }
    @Test
     public void insertionSort() {
-        int[] vectorOrdenado = insertion.insertionSort(vector, vector.length);
-        for(int i= 0; i<vector.length; i++){
-            assertEquals(vector2[i], vectorOrdenado[i]);  
+        int[] Orden = insertion.insertionSort(Desordenado);
+        for(int i= 0; i<Desordenado.length; i++){
+            assertEquals(Ordenado[i], Orden[i]);  
      
 }
     }
 
 @Test
     public void bubbleSort() {
-        int[] vectorOrdenado = bubble.bubbleSort(vector,vector.length);
-        for(int i= 0; i<vector.length; i++){
-            assertEquals(vector2[i], vectorOrdenado[i]);
+        int[] Orden = bubble.bubbleSort(Desordenado);
+        for(int i= 0; i<Desordenado.length; i++){
+            assertEquals(Ordenado[i], Orden[i]);
+        }
+    }
+@Test
+    public void bogoSort() {
+        int[] Orden = bogo.BogoSort(Desordenado);
+        for(int i= 0; i<Desordenado.length; i++){
+            assertEquals(Ordenado[i], Orden[i]);
         }
     }
 }

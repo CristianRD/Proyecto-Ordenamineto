@@ -6,6 +6,8 @@
 
 package sortaplicacion;
 
+import java.util.Random;
+
 
 
 /**
@@ -16,7 +18,7 @@ public class Ordenador {
   
     
     
-public int[] selectionSort(int[] numeros, int length) {
+public int[] selectionSort(int[] numeros) {
   int j,i,min,temp;
   for(j=0; j < numeros.length-1; j++){
    min=j;
@@ -31,7 +33,7 @@ public int[] selectionSort(int[] numeros, int length) {
     return numeros;
 } 
     
- public int[] insertionSort(int[] numeros, int length) {
+ public int[] insertionSort(int[] numeros) {
   
         int k,i, temp;
         for (k = 1; k < numeros.length; k++) {
@@ -88,7 +90,7 @@ public void selectionSort3(int numeros[]){
         }
     }
 }
-public int[] bubbleSort(int[] numeros, int length) {
+public int[] bubbleSort(int[] numeros) {
  
         boolean flag = true;
         int temp;
@@ -108,28 +110,25 @@ public int[] bubbleSort(int[] numeros, int length) {
         }
     return numeros;
   }
- public int[] bogoSort(int[] numeros, int length)  
-    {  
-        while (!isSorted(numeros)) {  
-            for (int i = 0; i <numeros.length; i++){  
-                int randomPosition = (numeros.length);  
-  
-                int temp = numeros[i];  
-                numeros[i] = numeros[randomPosition];  
-                numeros[randomPosition] = temp;  
-            }  
-        }  
-    return null;
-    }  
-  
-    private static boolean isSorted(int[] data)  
-    {  
-        for (int i = 1; i < data.length; i++)  
-            if (data[i] < data[i - 1])  
-                return false;  
-  
-        return true;  
-    }  
+ public int[] BogoSort(int[] numeros){
+        Random rnd = new Random();
+        while(true){
+            boolean sorted = true;
+            for(int i = 0; i < numeros.length-1; i++)
+                if(numeros[i] > numeros[i+1]){
+                    sorted = false;
+                    break;
+                }
+            if (sorted)
+                return numeros;
+            for(int i = numeros.length - 1; i > 0; i--){
+                int rand = rnd.nextInt(i);
+                int temp = numeros[i];
+                numeros[i] = numeros[rand];
+                numeros[rand] = temp;
+            }
+    }
+}
 }
 
 

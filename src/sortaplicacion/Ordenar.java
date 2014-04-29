@@ -52,11 +52,13 @@ public class Ordenar extends javax.swing.JFrame {
         txtnumber1 = new javax.swing.JTextField();
         txtnumber8 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        btnlimpiar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        JMopciones = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMIlimpiar = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMIsalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,26 +75,34 @@ public class Ordenar extends javax.swing.JFrame {
 
         jLabel3.setText("Elija una forma de Ordenamiento");
 
-        jMenu1.setText("Opciones");
-
-        jMenuItem2.setText("Limpiar");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        btnlimpiar.setText("Limpiar");
+        btnlimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                btnlimpiarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
-        jMenu1.add(jSeparator1);
 
-        jMenuItem1.setText("Salir");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        JMopciones.setText("Opciones");
+        JMopciones.add(jSeparator1);
+
+        jMIlimpiar.setText("Limpiar todo");
+        jMIlimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMIlimpiarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        JMopciones.add(jMIlimpiar);
+        JMopciones.add(jSeparator2);
 
-        jMenuBar1.add(jMenu1);
+        jMIsalir.setText("Salir");
+        jMIsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIsalirActionPerformed(evt);
+            }
+        });
+        JMopciones.add(jMIsalir);
+
+        jMenuBar1.add(JMopciones);
 
         setJMenuBar(jMenuBar1);
 
@@ -103,8 +113,6 @@ public class Ordenar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jcbordenadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -142,8 +150,13 @@ public class Ordenar extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtnumero8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtnumber8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(29, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtnumber8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnlimpiar))))
+                    .addComponent(jcbordenadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +185,8 @@ public class Ordenar extends javax.swing.JFrame {
                     .addComponent(txtnumber6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtnumber7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtnumber8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtnumber5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnumber5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnlimpiar))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
@@ -211,7 +225,7 @@ public class Ordenar extends javax.swing.JFrame {
                 numeros[7] = numero8;
 
                 Ordenador ord = new Ordenador();
-                ord.insertionSort(numeros, numeros.length);
+                ord.insertionSort(numeros);
 
                 txtnumber1.setText(String.valueOf(numeros[0]));
                 txtnumber2.setText(String.valueOf(numeros[1]));
@@ -253,7 +267,7 @@ public class Ordenar extends javax.swing.JFrame {
                 numeros[7] = numero8;
 
                 Ordenador ord = new Ordenador();
-                ord.selectionSort(numeros, numeros.length);
+                ord.selectionSort(numeros);
 
                 txtnumber1.setText(String.valueOf(numeros[0]));
                 txtnumber2.setText(String.valueOf(numeros[1]));
@@ -295,7 +309,7 @@ public class Ordenar extends javax.swing.JFrame {
                 numeros[7] = numero8;
 
                 Ordenador ord = new Ordenador();
-                ord.bubbleSort(numeros, numeros.length);
+                ord.bubbleSort(numeros);
 
                 txtnumber1.setText(String.valueOf(numeros[0]));
                 txtnumber2.setText(String.valueOf(numeros[1]));
@@ -337,7 +351,7 @@ public class Ordenar extends javax.swing.JFrame {
                 numeros[7] = numero8;
 
                 Ordenador ord = new Ordenador();
-                ord.bogoSort(numeros, numeros.length);
+                ord.BogoSort(numeros);
 
                 txtnumber1.setText(String.valueOf(numeros[0]));
                 txtnumber2.setText(String.valueOf(numeros[1]));
@@ -357,8 +371,13 @@ public class Ordenar extends javax.swing.JFrame {
        }   
     }//GEN-LAST:event_jcbordenadoresActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMIsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIsalirActionPerformed
+        
+        dispose();
+    }//GEN-LAST:event_jMIsalirActionPerformed
 
+    private void jMIlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIlimpiarActionPerformed
+        
         this.txtnumero1.setText(" ");
         this.txtnumero2.setText(" ");
         this.txtnumero3.setText(" ");
@@ -379,13 +398,19 @@ public class Ordenar extends javax.swing.JFrame {
         this.txtnumber7.setText(" ");
         this.txtnumber8.setText(" ");
 
-        
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMIlimpiarActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        
-        dispose();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
+       
+        this.txtnumber1.setText(" ");
+        this.txtnumber2.setText(" ");
+        this.txtnumber3.setText(" ");
+        this.txtnumber4.setText(" ");
+        this.txtnumber5.setText(" ");
+        this.txtnumber6.setText(" ");
+        this.txtnumber7.setText(" ");
+        this.txtnumber8.setText(" ");
+    }//GEN-LAST:event_btnlimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -423,14 +448,16 @@ public class Ordenar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu JMopciones;
+    private javax.swing.JButton btnlimpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMIlimpiar;
+    private javax.swing.JMenuItem jMIsalir;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JComboBox jcbordenadores;
     private javax.swing.JTextField txtnumber1;
     private javax.swing.JTextField txtnumber2;
